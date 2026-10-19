@@ -86,10 +86,10 @@ def lang_switch(lang: str, page: str, strings: dict, floating: bool = False) -> 
             f'{strings[other]["lang_name"]}</option>'
         )
     cls = "lang-switch floating" if floating else "lang-switch"
-    # De zichtbare tekst is gewone tekst (lijnt uit met de menulinks); de echte keuzelijst ligt er onzichtbaar
-    # overheen, zodat klikken het systeemmenu opent.
+    # Zichtbaar staat alleen de taalcode (NL, EN, ...), als gewone tekst zodat hij uitlijnt met de menulinks;
+    # in het menu zelf staan de voluit geschreven taalnamen. De echte keuzelijst ligt er onzichtbaar overheen.
     return (
-        f'<label class="{cls}">{GLOBE}<span>{strings[lang]["lang_name"]}</span>'
+        f'<label class="{cls}">{GLOBE}<span>{lang.upper()}</span>'
         f'<select aria-label="{strings[lang]["lang_label"]}">{"".join(options)}</select></label>'
     )
 
@@ -103,14 +103,20 @@ def alternates(page: str) -> str:
 def nav(lang: str, page: str, strings: dict) -> str:
     here = page_path(lang, page)
     s = strings[lang]
+    # Op smalle schermen verdwijnen de links achter een knop met twee streepjes (zoals bij Apple); de
+    # onzichtbare checkbox houdt bij of het menu open is, zodat er geen script voor nodig is.
     return (
         '<nav class="nav">\n'
+        '  <input type="checkbox" id="menu-toggle" class="menu-toggle">\n'
         f'  <a class="brand" href="{relative(here, page_path(lang, "home"))}">Anton Wubben</a>\n'
-        "  <ul>\n"
+        '  <ul class="nav-links">\n'
         f'    <li><a href="{relative(here, page_path(lang, "wie"))}">{s["nav_wie"]}</a></li>\n'
         f'    <li><a href="{relative(here, page_path(lang, "glutencheck"))}">{s["nav_glutencheck"]}</a></li>\n'
         f"    <li>{lang_switch(lang, page, strings)}</li>\n"
         "  </ul>\n"
+        '  <div class="nav-tools">\n'
+        '    <label for="menu-toggle" class="menu-button" aria-label="Menu"><span></span><span></span></label>\n'
+        "  </div>\n"
         "</nav>"
     )
 
