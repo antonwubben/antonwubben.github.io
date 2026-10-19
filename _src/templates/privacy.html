@@ -55,9 +55,12 @@
 
 <h2 id="contact">{{pv_contact_h2}}</h2>
 <p>{{pv_contact_p}}</p>
-<form action="https://formsubmit.co/mail@antonwubben.nl" method="POST">
+<!-- Na het versturen komt de bezoeker terug op deze pagina met ?sent=1; het script onderaan toont dan het bedankje. -->
+<p class="sent" hidden>{{pv_sent}}</p>
+<form action="https://formsubmit.co/antonwubben@icloud.com" method="POST">
   <input type="hidden" name="_subject" value="{{pv_form_subject}}">
   <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_next" value="{{page_url}}?sent=1#contact">
   <input type="text" name="_honey" style="display:none">
   <label for="email">{{pv_label_email}}</label>
   <input id="email" type="email" name="email" autocomplete="email">

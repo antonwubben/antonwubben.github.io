@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacybeleid – Glutencheck</title>
-<link rel="stylesheet" href="../style.css?v=9efc20b0">
+<link rel="stylesheet" href="../style.css?v=c77dddaf">
 <link rel="icon" href="../glutencheck/icon.png">
 <link rel="alternate" hreflang="nl" href="https://antonwubben.nl/glutencheck/privacy.html">
 <link rel="alternate" hreflang="en" href="https://antonwubben.nl/en/glutencheck/privacy.html">
@@ -73,9 +73,12 @@
 
 <h2 id="contact">Contact</h2>
 <p>Vragen over privacy of over de app? Gebruik het formulier hieronder. Je bericht wordt via FormSubmit bezorgd bij de ontwikkelaar. Je e-mailadres is alleen nodig als je antwoord wilt.</p>
-<form action="https://formsubmit.co/mail@antonwubben.nl" method="POST">
+<!-- Na het versturen komt de bezoeker terug op deze pagina met ?sent=1; het script onderaan toont dan het bedankje. -->
+<p class="sent" hidden>Bedankt, je bericht is verstuurd.</p>
+<form action="https://formsubmit.co/antonwubben@icloud.com" method="POST">
   <input type="hidden" name="_subject" value="Glutencheck: bericht via privacypagina">
   <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_next" value="https://antonwubben.nl/glutencheck/privacy.html?sent=1#contact">
   <input type="text" name="_honey" style="display:none">
   <label for="email">E-mailadres (optioneel)</label>
   <input id="email" type="email" name="email" autocomplete="email">
@@ -93,6 +96,9 @@
 
 <script>
 (function () {
+  // Bedankje tonen als het contactformulier zojuist is verstuurd (FormSubmit stuurt terug met ?sent=1).
+  var sent = document.querySelector('.sent');
+  if (sent && /[?&]sent=1/.test(location.search)) { sent.hidden = false; }
   var key = 'lang', sels = document.querySelectorAll('.lang-switch select'), i;
   function go(url, lang) { try { localStorage.setItem(key, lang); } catch (e) {} location.href = url; }
   for (i = 0; i < sels.length; i++) {

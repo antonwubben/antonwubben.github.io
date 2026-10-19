@@ -36,6 +36,9 @@ GLOBE = (
 # net zoals de app de taal van het toestel overneemt. Daarna wint altijd de keuze in de taalkiezer.
 SCRIPT = """<script>
 (function () {
+  // Bedankje tonen als het contactformulier zojuist is verstuurd (FormSubmit stuurt terug met ?sent=1).
+  var sent = document.querySelector('.sent');
+  if (sent && /[?&]sent=1/.test(location.search)) { sent.hidden = false; }
   var key = 'lang', sels = document.querySelectorAll('.lang-switch select'), i;
   function go(url, lang) { try { localStorage.setItem(key, lang); } catch (e) {} location.href = url; }
   for (i = 0; i < sels.length; i++) {
@@ -156,6 +159,7 @@ def render(lang: str, page: str, templates: dict, strings: dict) -> str:
         url_wie=relative(here, page_path(lang, "wie")),
         url_glutencheck=relative(here, page_path(lang, "glutencheck")),
         url_privacy=relative(here, page_path(lang, "privacy")),
+        page_url=f"{SITE}/{here}",
     )
 
     html = templates[page]

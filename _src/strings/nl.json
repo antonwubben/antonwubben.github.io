@@ -68,5 +68,6 @@
   "pv_form_subject": "Glutencheck: bericht via privacypagina",
   "pv_label_email": "E-mailadres (optioneel)",
   "pv_label_message": "Bericht",
-  "pv_send": "Versturen"
+  "pv_send": "Versturen",
+  "pv_sent": "Bedankt, je bericht is verstuurd."
 }

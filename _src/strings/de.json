@@ -68,5 +68,6 @@
   "pv_form_subject": "Glutencheck: Nachricht über die Datenschutzseite",
   "pv_label_email": "E-Mail-Adresse (optional)",
   "pv_label_message": "Nachricht",
-  "pv_send": "Senden"
+  "pv_send": "Senden",
+  "pv_sent": "Danke, deine Nachricht wurde gesendet."
 }

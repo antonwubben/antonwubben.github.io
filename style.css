@@ -326,6 +326,7 @@ main {
 .actions.start { justify-content: flex-start; margin-top: 40px; }
 
 /* Contactformulier. */
+.sent { padding: 12px 16px; border-radius: 12px; background: rgba(52, 199, 89, 0.15); color: var(--text); font-weight: 500; }
 form { display: grid; gap: 6px; max-width: 32em; }
 form label { font-size: 15px; color: var(--muted); margin-top: 10px; }
 input[type="email"], textarea {

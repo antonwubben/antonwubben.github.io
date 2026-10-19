@@ -68,5 +68,6 @@
   "pv_form_subject": "Glutencheck : message via la page de confidentialité",
   "pv_label_email": "Adresse e-mail (facultatif)",
   "pv_label_message": "Message",
-  "pv_send": "Envoyer"
+  "pv_send": "Envoyer",
+  "pv_sent": "Merci, votre message a bien été envoyé."
 }

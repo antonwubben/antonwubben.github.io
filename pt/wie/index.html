@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Quem é o Anton? – Anton Wubben</title>
 <meta name="description" content="Anton Wubben. Curioso. Gestor de projetos de edifícios públicos e designer de colaboração multidisciplinar na Haskoning. Criador da app Glutencheck.">
-<link rel="stylesheet" href="../../style.css?v=9efc20b0">
+<link rel="stylesheet" href="../../style.css?v=c77dddaf">
 <link rel="icon" href="../../glutencheck/icon.png">
 <link rel="alternate" hreflang="nl" href="https://antonwubben.nl/wie/index.html">
 <link rel="alternate" hreflang="en" href="https://antonwubben.nl/en/wie/index.html">
@@ -59,6 +59,9 @@
 
 <script>
 (function () {
+  // Bedankje tonen als het contactformulier zojuist is verstuurd (FormSubmit stuurt terug met ?sent=1).
+  var sent = document.querySelector('.sent');
+  if (sent && /[?&]sent=1/.test(location.search)) { sent.hidden = false; }
   var key = 'lang', sels = document.querySelectorAll('.lang-switch select'), i;
   function go(url, lang) { try { localStorage.setItem(key, lang); } catch (e) {} location.href = url; }
   for (i = 0; i < sels.length; i++) {
