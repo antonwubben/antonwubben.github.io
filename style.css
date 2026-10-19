@@ -62,7 +62,45 @@ a:hover { text-decoration: underline; }
 .nav a { color: var(--text); opacity: 0.85; }
 .nav a:hover { opacity: 1; text-decoration: none; }
 .nav .brand { font-weight: 600; }
-.nav ul { list-style: none; display: flex; gap: 28px; margin: 0; padding: 0; }
+.nav ul { list-style: none; display: flex; align-items: stretch; gap: 28px; margin: 0; padding: 0; height: 48px; }
+/* Elk menu-item is een even hoog vak met de inhoud in het midden, zodat links en taalkeuze op één lijn staan. */
+.nav li { display: flex; align-items: center; }
+
+/* Taalkeuze: wereldbolletje met een kale keuzelijst, in de navigatiebalk of los rechtsboven op de voorpagina. */
+.lang-switch {
+  position: relative;
+  display: flex;
+  margin: 0;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--text);
+  opacity: 0.85;
+  cursor: pointer;
+}
+.lang-switch span { display: block; line-height: 1; }
+.lang-switch:hover { opacity: 1; }
+.lang-switch svg { display: block; width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; }
+/* Zichtbare taalnaam met pijltje: gewone tekst, dus exact op de lijn van de menulinks. */
+.lang-switch span {
+  padding-right: 16px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M3 4.5l3 3 3-3' fill='none' stroke='%236e6e73' stroke-width='1.5' stroke-linecap='round'/></svg>") no-repeat right center / 12px 12px;
+}
+/* De echte keuzelijst ligt onzichtbaar over de tekst, zodat een klik het systeemmenu opent. */
+.lang-switch select {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  font: inherit;
+}
+.lang-switch:focus-within { outline: 2px solid var(--link); outline-offset: 4px; border-radius: 4px; }
+.lang-switch.floating { position: absolute; top: 0; right: max(20px, calc((100% - 980px) / 2)); height: 48px; }
+body.home { position: relative; }
 
 main {
   max-width: 980px;
@@ -122,6 +160,10 @@ main {
 /* LinkedIn-knop: gewone knopgrootte in het LinkedIn-blauw, alleen het logo anderhalf keer zo groot. */
 .button.linkedin { background: #0a66c2; color: #fff; }
 .button.linkedin svg { width: 27px; height: 27px; }
+
+/* Knop zonder link (bijvoorbeeld "Binnenkort in de App Store"): ziet eruit als een knop, reageert niet. */
+.button.static { cursor: default; user-select: none; }
+.button.static:hover { transform: none; }
 
 /* Tegels op de hoofdpagina: twee kaarten met een afgerond vierkant icoon. */
 .tiles {
@@ -197,7 +239,10 @@ main {
 .article h1 { font-size: clamp(32px, 5vw, 44px); font-weight: 700; letter-spacing: -0.015em; line-height: 1.1; margin: 0 0 8px; }
 .article h2 { font-size: 22px; font-weight: 600; margin-top: 2em; letter-spacing: -0.01em; }
 .article .meta { color: var(--muted); font-size: 15px; margin-bottom: 2em; }
-.article .portrait { width: 160px; height: 160px; border-radius: 36px; object-fit: cover; display: block; margin-bottom: 28px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); }
+.portrait { width: 160px; height: 160px; border-radius: 36px; object-fit: cover; display: block; margin-bottom: 28px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); }
+/* Portret in de kop van "Wie is Anton?": gecentreerd, net als het app-icoon op de Glutencheck-pagina. */
+.hero .portrait { margin: 0 auto 24px; }
+.hero + .article { padding-top: 8px; }
 .article .lang { margin-top: 4em; padding-top: 3em; border-top: 1px solid var(--line); }
 .article ul { padding-left: 1.2em; }
 .article li { margin-bottom: 0.4em; }
@@ -224,7 +269,7 @@ main {
 
 /* Contactformulier. */
 form { display: grid; gap: 6px; max-width: 32em; }
-label { font-size: 15px; color: var(--muted); margin-top: 10px; }
+form label { font-size: 15px; color: var(--muted); margin-top: 10px; }
 input[type="email"], textarea {
   font: inherit;
   padding: 10px 12px;
@@ -259,7 +304,7 @@ button[type="submit"] {
 }
 .tile .icon,
 .hero .app-icon,
-.article .portrait,
+.portrait,
 .feature .symbol {
   animation: flip-in 4.2s both;
   animation-delay: 0.1s;
@@ -276,7 +321,7 @@ button[type="submit"] {
 @media (prefers-reduced-motion: reduce) {
   .tile .icon,
   .hero .app-icon,
-  .article .portrait,
+  .portrait,
   .feature .symbol { animation: none; }
   .tile, .button { transition: none; }
 }

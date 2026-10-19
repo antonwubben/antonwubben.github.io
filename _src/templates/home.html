@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{home_title}}</title>
+<meta name="description" content="{{home_description}}">
+<link rel="stylesheet" href="{{root}}style.css">
+<link rel="icon" href="{{root}}glutencheck/icon.png">
+{{alternates}}
+</head>
+<body class="home">
+
+<!-- Geen navigatiebalk op de voorpagina: de twee tegels zijn het menu. Alleen de taalkeuze rechtsboven. -->
+{{lang_switch_floating}}
+
+<main>
+  <section class="hero">
+    <h1>Anton Wubben</h1>
+    <p>{{home_subtitle}}</p>
+  </section>
+
+  <section class="tiles">
+    <a class="tile" href="{{url_wie}}">
+      <div class="icon" aria-hidden="true">
+        <img src="{{root}}wie/anton.jpg" alt="">
+      </div>
+      <h2>{{nav_wie}}</h2>
+      <p>{{home_tile_wie_text}}</p>
+      <span class="more">{{home_tile_wie_more}}</span>
+    </a>
+
+    <a class="tile" href="{{url_glutencheck}}">
+      <div class="icon" aria-hidden="true">
+        <img src="{{root}}glutencheck/icon.png" alt="">
+      </div>
+      <h2>Glutencheck</h2>
+      <p>{{home_tile_gc_text}}</p>
+      <span class="more">{{home_tile_gc_more}}</span>
+    </a>
+  </section>
+</main>
+
+<footer class="minimal">
+  <span>{{copyright}}</span>
+</footer>
+
+{{script}}
+</body>
+</html>

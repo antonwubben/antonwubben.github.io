@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{pv_title}}</title>
+<link rel="stylesheet" href="{{root}}style.css">
+<link rel="icon" href="{{root}}glutencheck/icon.png">
+{{alternates}}
+</head>
+<body>
+
+{{nav}}
+
+<main>
+<article class="article">
+
+<h1>{{pv_h1}}</h1>
+<p class="meta">{{pv_updated}}</p>
+
+<p>{{pv_intro}}</p>
+
+<h2>{{pv_summary_h2}}</h2>
+<ul>
+  <li>{{pv_summary_1}}</li>
+  <li>{{pv_summary_2}}</li>
+  <li>{{pv_summary_3}}</li>
+  <li>{{pv_summary_4}}</li>
+  <li>{{pv_summary_5}}</li>
+</ul>
+
+<h2>{{pv_photos_h2}}</h2>
+<p>{{pv_photos_p}}</p>
+
+<h2>{{pv_off_h2}}</h2>
+<p>{{pv_off_p}}</p>
+
+<h2>{{pv_history_h2}}</h2>
+<p>{{pv_history_p}}</p>
+
+<h2>{{pv_feedback_h2}}</h2>
+<p>{{pv_feedback_p}}</p>
+
+<h2>{{pv_tips_h2}}</h2>
+<p>{{pv_tips_p}}</p>
+
+<h2>{{pv_settings_h2}}</h2>
+<p>{{pv_settings_p}}</p>
+
+<h2>{{pv_children_h2}}</h2>
+<p>{{pv_children_p}}</p>
+
+<h2>{{pv_changes_h2}}</h2>
+<p>{{pv_changes_p}}</p>
+
+<h2 id="contact">{{pv_contact_h2}}</h2>
+<p>{{pv_contact_p}}</p>
+<form action="https://formsubmit.co/mail@antonwubben.nl" method="POST">
+  <input type="hidden" name="_subject" value="{{pv_form_subject}}">
+  <input type="hidden" name="_template" value="table">
+  <input type="text" name="_honey" style="display:none">
+  <label for="email">{{pv_label_email}}</label>
+  <input id="email" type="email" name="email" autocomplete="email">
+  <label for="message">{{pv_label_message}}</label>
+  <textarea id="message" name="message" rows="5" required></textarea>
+  <button type="submit">{{pv_send}}</button>
+</form>
+
+</article>
+</main>
+
+<footer class="minimal">
+  <span>{{copyright}}</span>
+</footer>
+
+{{script}}
+</body>
+</html>
