@@ -18,8 +18,18 @@
 </head>
 <body class="home">
 
-<!-- Geen navigatiebalk op de voorpagina: de twee tegels zijn het menu. Alleen de taalkeuze rechtsboven. -->
-<label class="lang-switch floating"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>DE</span><select aria-label="Sprache"><option value="../index.html" data-lang="nl">Nederlands</option><option value="../en/index.html" data-lang="en">English</option><option value="index.html" data-lang="de" selected>Deutsch</option><option value="../es/index.html" data-lang="es">Español</option><option value="../fr/index.html" data-lang="fr">Français</option><option value="../it/index.html" data-lang="it">Italiano</option><option value="../pt/index.html" data-lang="pt">Português</option></select></label>
+<nav class="nav">
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <a class="brand" href="index.html">Anton Wubben</a>
+  <ul class="nav-links">
+    <li><a href="wie/index.html">Wer ist Anton?</a></li>
+    <li><a href="glutencheck/index.html">Glutencheck</a></li>
+    <li><label class="lang-switch"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>DE</span><select aria-label="Sprache"><option value="../index.html" data-lang="nl">Nederlands</option><option value="../en/index.html" data-lang="en">English</option><option value="index.html" data-lang="de" selected>Deutsch</option><option value="../es/index.html" data-lang="es">Español</option><option value="../fr/index.html" data-lang="fr">Français</option><option value="../it/index.html" data-lang="it">Italiano</option><option value="../pt/index.html" data-lang="pt">Português</option></select></label></li>
+  </ul>
+  <div class="nav-tools">
+    <label for="menu-toggle" class="menu-button" aria-label="Menu"><span></span><span></span></label>
+  </div>
+</nav>
 
 <main>
   <section class="tiles">
