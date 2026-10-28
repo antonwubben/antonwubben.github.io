@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anton Wubben</title>
+<meta name="description" content="Anton Wubben. Curioso. Project manager di edifici pubblici e progettista di collaborazione multidisciplinare presso Haskoning. Creatore dell'app iOS Glutenscan.">
+<link rel="stylesheet" href="style.css?v=1e95a3fb">
+<link rel="icon" href="glutenscan/icon.png">
+<link rel="alternate" hreflang="nl" href="https://antonwubben.nl/index.html">
+<link rel="alternate" hreflang="en" href="https://antonwubben.nl/index_en.html">
+<link rel="alternate" hreflang="de" href="https://antonwubben.nl/index_de.html">
+<link rel="alternate" hreflang="es" href="https://antonwubben.nl/index_es.html">
+<link rel="alternate" hreflang="fr" href="https://antonwubben.nl/index_fr.html">
+<link rel="alternate" hreflang="it" href="https://antonwubben.nl/index_it.html">
+<link rel="alternate" hreflang="pt" href="https://antonwubben.nl/index_pt.html">
+<link rel="alternate" hreflang="x-default" href="https://antonwubben.nl/index.html">
+</head>
+<body class="home">
+
+<nav class="nav">
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <a class="brand" href="index_it.html">Anton Wubben</a>
+  <ul class="nav-links">
+    <li><a href="wie/index_it.html">Chi è Anton?</a></li>
+    <li><a href="glutenscan/index_it.html">Glutenscan</a></li>
+    <li><label class="lang-switch"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>IT</span><select aria-label="Lingua"><option value="index.html" data-lang="nl">Nederlands</option><option value="index_en.html" data-lang="en">English</option><option value="index_de.html" data-lang="de">Deutsch</option><option value="index_es.html" data-lang="es">Español</option><option value="index_fr.html" data-lang="fr">Français</option><option value="index_it.html" data-lang="it" selected>Italiano</option><option value="index_pt.html" data-lang="pt">Português</option></select></label></li>
+  </ul>
+  <div class="nav-tools">
+    <label for="menu-toggle" class="menu-button" aria-label="Menu"><span></span><span></span></label>
+  </div>
+</nav>
+
+<main>
+  <section class="tiles">
+    <a class="tile" href="wie/index_it.html">
+      <div class="icon" aria-hidden="true">
+        <img src="wie/anton.jpg" alt="">
+      </div>
+      <h2>Chi è Anton?</h2>
+      <p>Leggi del mio percorso e di ciò che mi spinge.</p>
+      <span class="more">Leggi di più ›</span>
+    </a>
+
+    <a class="tile" href="glutenscan/index_it.html">
+      <div class="icon" aria-hidden="true">
+        <img src="glutenscan/icon.png" alt="">
+      </div>
+      <h2>Glutenscan</h2>
+      <p>Verifica con una foto se un prodotto contiene glutine.</p>
+      <span class="more">Scopri l'app ›</span>
+    </a>
+  </section>
+</main>
+
+<footer class="minimal">
+  <span>© 2026 Anton Wubben</span>
+</footer>
+
+<script>
+(function () {
+  // Bedankje tonen als het contactformulier zojuist is verstuurd (FormSubmit stuurt terug met ?sent=1).
+  var sent = document.querySelector('.sent');
+  if (sent && /[?&]sent=1/.test(location.search)) { sent.hidden = false; }
+  var key = 'lang', sels = document.querySelectorAll('.lang-switch select'), i;
+  function go(url, lang) { try { localStorage.setItem(key, lang); } catch (e) {} location.href = url; }
+  for (i = 0; i < sels.length; i++) {
+    sels[i].addEventListener('change', function () {
+      var o = this.options[this.selectedIndex]; go(o.value, o.getAttribute('data-lang'));
+    });
+  }
+  try {
+    if (!sels.length || sessionStorage.getItem('langChecked')) return;
+    sessionStorage.setItem('langChecked', '1');
+    var current = document.documentElement.lang, wanted = localStorage.getItem(key);
+    if (!wanted) { wanted = ((navigator.languages && navigator.languages[0]) || navigator.language || '').slice(0, 2).toLowerCase(); }
+    if (wanted && wanted !== current) {
+      var o = sels[0].querySelector('option[data-lang="' + wanted + '"]');
+      if (o) location.replace(o.value);
+    }
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>

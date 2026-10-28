@@ -23,8 +23,8 @@ DEFAULT = "nl"  # staat in de hoofdmap, zonder taalmap
 PAGES = {
     "home": "index.html",
     "wie": "wie/index.html",
-    "glutencheck": "glutencheck/index.html",
-    "privacy": "glutencheck/privacy.html",
+    "glutenscan": "glutenscan/index.html",
+    "privacy": "glutenscan/privacy.html",
 }
 
 GLOBE = (
@@ -62,7 +62,13 @@ SCRIPT = """<script>
 
 def page_path(lang: str, page: str) -> str:
     path = PAGES[page]
-    return path if lang == DEFAULT else f"{lang}/{path}"
+    if lang == DEFAULT:
+        return path
+
+    directory, filename = posixpath.split(path)
+    stem, extension = posixpath.splitext(filename)
+    localized_filename = f"{stem}_{lang}{extension}"
+    return posixpath.join(directory, localized_filename) if directory else localized_filename
 
 
 def relative(from_path: str, to_path: str) -> str:
@@ -114,7 +120,7 @@ def nav(lang: str, page: str, strings: dict) -> str:
         f'  <a class="brand" href="{relative(here, page_path(lang, "home"))}">Anton Wubben</a>\n'
         '  <ul class="nav-links">\n'
         f'    <li><a href="{relative(here, page_path(lang, "wie"))}">{s["nav_wie"]}</a></li>\n'
-        f'    <li><a href="{relative(here, page_path(lang, "glutencheck"))}">{s["nav_glutencheck"]}</a></li>\n'
+        f'    <li><a href="{relative(here, page_path(lang, "glutenscan"))}">{s["nav_glutenscan"]}</a></li>\n'
         f"    <li>{lang_switch(lang, page, strings)}</li>\n"
         "  </ul>\n"
         '  <div class="nav-tools">\n'
@@ -136,7 +142,7 @@ def render(lang: str, page: str, templates: dict, strings: dict) -> str:
     # Links in lopende tekst.
     s["wie_p4"] = s["wie_p4"].replace("{haskoning}", ext("https://www.haskoning.com", "Haskoning"))
     s["wie_p6"] = s["wie_p6"].replace(
-        "{glutencheck}", f'<a href="{relative(here, page_path(lang, "glutencheck"))}">Glutencheck</a>'
+        "{glutenscan}", f'<a href="{relative(here, page_path(lang, "glutenscan"))}">Glutenscan</a>'
     )
     s["pv_off_p"] = (
         s["pv_off_p"]
@@ -157,7 +163,7 @@ def render(lang: str, page: str, templates: dict, strings: dict) -> str:
         script=SCRIPT,
         url_home=relative(here, page_path(lang, "home")),
         url_wie=relative(here, page_path(lang, "wie")),
-        url_glutencheck=relative(here, page_path(lang, "glutencheck")),
+        url_glutenscan=relative(here, page_path(lang, "glutenscan")),
         url_privacy=relative(here, page_path(lang, "privacy")),
         page_url=f"{SITE}/{here}",
     )
@@ -190,6 +196,13 @@ def main() -> None:
         extra = set(strings[lang]) - base
         if missing or extra:
             raise SystemExit(f"{lang}.json: ontbreekt {sorted(missing)}, overbodig {sorted(extra)}")
+
+    # Verwijder oude taalmap-uitvoer. Vertalingen staan voortaan naast de Nederlandse bestanden
+    # met een suffix, bijvoorbeeld glutenscan/index_en.html.
+    import shutil
+    for lang in LANGS:
+        if lang != DEFAULT:
+            shutil.rmtree(OUT / lang, ignore_errors=True)
 
     written = []
     for lang in LANGS:

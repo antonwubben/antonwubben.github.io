@@ -305,7 +305,7 @@ main {
 .article h2 { font-size: 22px; font-weight: 600; margin-top: 2em; letter-spacing: -0.01em; }
 .article .meta { color: var(--muted); font-size: 15px; margin-bottom: 2em; }
 .portrait { width: 160px; height: 160px; border-radius: 36px; object-fit: cover; display: block; margin-bottom: 28px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); }
-/* Portret in de kop van "Wie is Anton?": gecentreerd, net als het app-icoon op de Glutencheck-pagina. */
+/* Portret in de kop van "Wie is Anton?": gecentreerd, net als het app-icoon op de Glutenscan-pagina. */
 .hero .portrait { margin: 0 auto 24px; }
 .hero + .article { padding-top: 8px; }
 .article .lang { margin-top: 4em; padding-top: 3em; border-top: 1px solid var(--line); }
