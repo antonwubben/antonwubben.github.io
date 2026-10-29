@@ -91,7 +91,10 @@
     });
   }
   try {
-    if (!sels.length || sessionStorage.getItem('langChecked')) return;
+    // Een expliciet geopende privacypagina behoudt altijd haar eigen taal. Zo kan de app
+    // rechtstreeks naar het juiste beleid linken, ongeacht een eerdere websitekeuze.
+    var isPrivacyPage = /(?:^|\/)privacy(?:_[a-z]{2})?\.html$/.test(location.pathname);
+    if (!sels.length || isPrivacyPage || sessionStorage.getItem('langChecked')) return;
     sessionStorage.setItem('langChecked', '1');
     var current = document.documentElement.lang, wanted = localStorage.getItem(key);
     if (!wanted) { wanted = ((navigator.languages && navigator.languages[0]) || navigator.language || '').slice(0, 2).toLowerCase(); }
