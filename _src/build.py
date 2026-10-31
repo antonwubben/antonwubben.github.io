@@ -2,7 +2,6 @@
 """Bouwt de meertalige site van antonwubben.nl.
 
 Bron: templates/*.html met {{sleutels}} en strings/<taal>.json met de teksten.
-Uitvoer: Nederlands in de hoofdmap van docs/, de andere talen in docs/<taal>/ met dezelfde structuur.
 
 Gebruik:  python3 docs/_src/build.py
 """
