@@ -103,5 +103,8 @@
   "gp_device_p": "Gespeicherte Orte, der Verlauf angesehener Orte und eine Kopie zuletzt abgerufener Orte werden nur auf deinem Gerät gespeichert. Sie werden weder synchronisiert noch geteilt. Beim Löschen der App verschwinden sie vollständig.",
   "gp_form_subject": "Glutenmaps: Nachricht über die Datenschutzseite",
   "nav_glutenmaps": "Glutenmaps",
-  "home_tile_gm_text": "Finde glutenfreie Restaurants und Cafés in der Nähe."
+  "home_tile_gm_text": "Finde glutenfreie Restaurants und Cafés in der Nähe.",
+  "gm_vision_h2": "Warum Bewertungen wichtig sind",
+  "gm_vision_p1": "Niemand wird jemals eine vollständige, weltweite Liste glutenfreier Orte erstellen. Betriebe ändern ihre Speisekarte, eröffnen und schließen, und keine Datenbank kommt dabei hinterher.",
+  "gm_vision_p2": "Was es dagegen immer geben wird, sind Menschen, die ihre Erfahrungen teilen: In Bewertungen schreiben sie, wo sie sicher essen konnten und wo nicht. In diese Richtung soll sich Glutenmaps entwickeln: Diese Erfahrungen neben den Datenbankangaben berücksichtigen und immer zeigen, woher Informationen stammen."
 }

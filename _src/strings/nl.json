@@ -103,5 +103,8 @@
   "gp_device_p": "Bewaarde plekken, de geschiedenis van bekeken plekken en een kopie van recent opgehaalde plekken worden alleen op je toestel bewaard. Ze worden niet gesynchroniseerd en niet gedeeld. Bij het verwijderen van de app verdwijnen ze volledig.",
   "gp_form_subject": "Glutenmaps: bericht via privacypagina",
   "nav_glutenmaps": "Glutenmaps",
-  "home_tile_gm_text": "Vind glutenvrije restaurants en cafés in de buurt."
+  "home_tile_gm_text": "Vind glutenvrije restaurants en cafés in de buurt.",
+  "gm_vision_h2": "Waarom reviews ertoe doen",
+  "gm_vision_p1": "Niemand gaat ooit een complete, wereldwijde lijst van glutenvrije plekken maken. Zaken wisselen van menu, openen en sluiten, en geen enkele database houdt dat bij.",
+  "gm_vision_p2": "Wat er wél altijd zal zijn, zijn mensen die hun ervaring delen: in reviews schrijven ze waar ze veilig konden eten en waar niet. Daar wil Glutenmaps naartoe: die ervaringen laten meewegen naast de gegevens uit databases, en altijd laten zien waar informatie vandaan komt."
 }

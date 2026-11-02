@@ -103,5 +103,8 @@
   "gp_device_p": "Os locais guardados, o histórico dos locais vistos e uma cópia dos locais obtidos recentemente ficam apenas no seu dispositivo. Não são sincronizados nem partilhados. Ao eliminar a app desaparecem por completo.",
   "gp_form_subject": "Glutenmaps: mensagem através da página de privacidade",
   "nav_glutenmaps": "Glutenmaps",
-  "home_tile_gm_text": "Encontre restaurantes e cafés sem glúten por perto."
+  "home_tile_gm_text": "Encontre restaurantes e cafés sem glúten por perto.",
+  "gm_vision_h2": "Porque as avaliações importam",
+  "gm_vision_p1": "Ninguém vai alguma vez criar uma lista completa e mundial de locais sem glúten. Os estabelecimentos mudam de ementa, abrem e fecham, e nenhuma base de dados acompanha esse ritmo.",
+  "gm_vision_p2": "O que haverá sempre são pessoas a partilhar a sua experiência: nas avaliações escrevem onde puderam comer em segurança e onde não. É nessa direção que o Glutenmaps quer ir: dar peso a essas experiências a par dos dados das bases de dados e mostrar sempre de onde vem a informação."
 }

@@ -295,6 +295,15 @@ main {
 .feature h3 { font-size: 20px; font-weight: 600; margin: 0 0 6px; letter-spacing: -0.01em; }
 .feature p { margin: 0; color: var(--muted); }
 
+/* Visie onder de kenmerken op de Glutenmaps-pagina: korte, gecentreerde tekst. */
+.vision {
+  max-width: 680px;
+  margin: 72px auto 0;
+  text-align: center;
+}
+.vision h2 { font-size: clamp(26px, 4vw, 34px); font-weight: 700; letter-spacing: -0.015em; line-height: 1.15; margin: 0 0 16px; }
+.vision p { font-size: 19px; color: var(--muted); margin: 0 0 16px; }
+
 /* Tekstpagina's zoals het privacybeleid en "Wie is Anton?". */
 .article {
   max-width: 680px;
