@@ -376,8 +376,9 @@ button[type="submit"] {
   animation-delay: 0.1s;
   backface-visibility: hidden;
 }
-/* De tweede tegel volgt iets later, zodat ze niet precies tegelijk draaien. */
+/* De tegels op de voorpagina draaien na elkaar in, van links naar rechts. */
 .tile:nth-child(2) .icon { animation-delay: 0.4s; }
+.tile:nth-child(3) .icon { animation-delay: 0.7s; }
 /* De drie kleine symbolen op de app-pagina draaien na elkaar, na het grote icoon. */
 .feature:nth-child(1) .symbol { animation-delay: 0.4s; }
 .feature:nth-child(2) .symbol { animation-delay: 0.7s; }
