@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{gp_title}}</title>
+<link rel="stylesheet" href="{{root}}style.css">
+<link rel="icon" href="{{root}}glutenmaps/icon.png">
+{{alternates}}
+</head>
+<body>
+
+{{nav}}
+
+<main>
+<article class="article">
+
+<h1>{{gp_h1}}</h1>
+<p class="meta">{{gp_updated}}</p>
+
+<p>{{gp_intro}}</p>
+
+<h2>{{pv_summary_h2}}</h2>
+<ul>
+  <li>{{gp_summary_1}}</li>
+  <li>{{gp_summary_2}}</li>
+  <li>{{gp_summary_3}}</li>
+  <li>{{gp_summary_4}}</li>
+  <li>{{gp_summary_5}}</li>
+</ul>
+
+<h2>{{gp_location_h2}}</h2>
+<p>{{gp_location_p}}</p>
+
+<h2>{{gp_servers_h2}}</h2>
+<p>{{gp_servers_p}}</p>
+
+<h2>{{gp_search_h2}}</h2>
+<p>{{gp_search_p}}</p>
+
+<h2>{{gp_osm_h2}}</h2>
+<p>{{gp_osm_p}}</p>
+
+<h2>{{gp_device_h2}}</h2>
+<p>{{gp_device_p}}</p>
+
+<h2>{{pv_children_h2}}</h2>
+<p>{{pv_children_p}}</p>
+
+<h2>{{pv_changes_h2}}</h2>
+<p>{{pv_changes_p}}</p>
+
+<h2 id="contact">{{pv_contact_h2}}</h2>
+<p>{{pv_contact_p}}</p>
+<!-- Na het versturen komt de bezoeker terug op deze pagina met ?sent=1; het script onderaan toont dan het bedankje. -->
+<p class="sent" hidden>{{pv_sent}}</p>
+<form action="https://formsubmit.co/antonwubben@icloud.com" method="POST">
+  <input type="hidden" name="_subject" value="{{gp_form_subject}}">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_next" value="{{page_url}}?sent=1#contact">
+  <input type="text" name="_honey" style="display:none">
+  <label for="email">{{pv_label_email}}</label>
+  <input id="email" type="email" name="email" autocomplete="email">
+  <label for="message">{{pv_label_message}}</label>
+  <textarea id="message" name="message" rows="5" required></textarea>
+  <button type="submit">{{pv_send}}</button>
+</form>
+
+</article>
+</main>
+
+<footer class="minimal">
+  <span>{{copyright}}</span>
+</footer>
+
+{{script}}
+</body>
+</html>

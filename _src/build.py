@@ -24,6 +24,8 @@ PAGES = {
     "wie": "wie/index.html",
     "glutenscan": "glutenscan/index.html",
     "privacy": "glutenscan/privacy.html",
+    "glutenmaps": "glutenmaps/index.html",
+    "gm_privacy": "glutenmaps/privacy.html",
 }
 
 GLOBE = (
@@ -123,6 +125,7 @@ def nav(lang: str, page: str, strings: dict) -> str:
         '  <ul class="nav-links">\n'
         f'    <li><a href="{relative(here, page_path(lang, "wie"))}">{s["nav_wie"]}</a></li>\n'
         f'    <li><a href="{relative(here, page_path(lang, "glutenscan"))}">{s["nav_glutenscan"]}</a></li>\n'
+        f'    <li><a href="{relative(here, page_path(lang, "glutenmaps"))}">{s["nav_glutenmaps"]}</a></li>\n'
         f"    <li>{lang_switch(lang, page, strings)}</li>\n"
         "  </ul>\n"
         '  <div class="nav-tools">\n'
@@ -156,6 +159,12 @@ def render(lang: str, page: str, templates: dict, strings: dict) -> str:
         "{apple_privacy}", ext("https://www.apple.com/legal/privacy/", s["pv_apple_privacy_text"])
     )
 
+    s["gp_servers_p"] = s["gp_servers_p"].replace("{supabase}", ext("https://supabase.com/privacy", "Supabase"))
+    s["gp_search_p"] = s["gp_search_p"].replace(
+        "{apple_privacy}", ext("https://www.apple.com/legal/privacy/", s["gp_apple_privacy_text"])
+    )
+    s["gp_osm_p"] = s["gp_osm_p"].replace("{osm}", ext("https://www.openstreetmap.org", "OpenStreetMap"))
+
     s.update(
         lang=lang,
         root=root,
@@ -165,8 +174,10 @@ def render(lang: str, page: str, templates: dict, strings: dict) -> str:
         script=SCRIPT,
         url_home=relative(here, page_path(lang, "home")),
         url_wie=relative(here, page_path(lang, "wie")),
+        url_glutenmaps=relative(here, page_path(lang, "glutenmaps")),
         url_glutenscan=relative(here, page_path(lang, "glutenscan")),
         url_privacy=relative(here, page_path(lang, "privacy")),
+        url_gm_privacy=relative(here, page_path(lang, "gm_privacy")),
         page_url=f"{SITE}/{here}",
     )
 
