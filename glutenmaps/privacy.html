@@ -42,21 +42,21 @@
 <h2>Samenvatting</h2>
 <ul>
   <li>Glutenmaps heeft geen account en verzamelt geen persoonsgegevens.</li>
-  <li>Je locatie wordt alleen gebruikt terwijl je de app open hebt, om plekken in de buurt te tonen. Hij wordt niet opgeslagen op een server van de ontwikkelaar.</li>
-  <li>Om plekken op te halen worden de coördinaten van het zoekgebied naar onze plekkendatabase en naar openbare OpenStreetMap-servers gestuurd.</li>
+  <li>Je locatie wordt alleen gebruikt terwijl je de app open hebt, om plekken in de buurt te tonen en de reistijd te berekenen. Hij wordt niet opgeslagen op een server van de ontwikkelaar.</li>
+  <li>Om plekken op te halen worden de coördinaten van het gebied dat je bekijkt, en wat je in het zoekveld typt, naar onze plekkendatabase gestuurd. Buiten het gebied dat die dekt gaan alleen de coördinaten naar openbare OpenStreetMap-servers.</li>
   <li>Bewaarde plekken en geschiedenis staan alleen op je eigen toestel.</li>
   <li>Er worden geen analyse- of trackingdiensten gebruikt.</li>
   <li>De knop “Zoek reviews” opent Google in je browser, met naam, plaats en land van de plek. De app zelf stuurt niets naar Google.</li>
 </ul>
 
 <h2>Locatie</h2>
-<p>De app vraagt toestemming om je locatie te gebruiken, uitsluitend als de app geopend is. Daarmee toont de app de kaart en de plekken in de buurt. Je kunt de app ook gebruiken zonder toestemming: zoek dan een plaats of adres. Je kunt de toestemming op elk moment wijzigen in de Instellingen van iOS.</p>
+<p>De app vraagt toestemming om je locatie te gebruiken, uitsluitend als de app geopend is. Daarmee toont de app de kaart, de plekken in de buurt en de reistijd naar een plek. Je kunt de app ook gebruiken zonder toestemming: zoek dan een plaats of adres. Je kunt de toestemming op elk moment wijzigen in de Instellingen van iOS.</p>
 
 <h2>Plekken ophalen</h2>
-<p>Om plekken te tonen stuurt de app de coördinaten en de straal van het gebied dat je bekijkt naar de database van de app (<a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a>) of, buiten het gebied dat die database dekt, naar openbare Overpass-servers van OpenStreetMap. Voor het plekkenbestand haalt de app ook gegevens op van antonwubben.nl. Zoals bij elk internetverzoek ontvangen deze servers daarbij je IP-adres. Deze gegevens worden niet aan jou gekoppeld en niet voor andere doeleinden gebruikt door de ontwikkelaar. De Overpass-servers en de databasedienst zijn onafhankelijke partijen met eigen beleid.</p>
+<p>Om plekken te tonen stuurt de app de coördinaten van het gebied dat je op de kaart bekijkt naar de database van de app (<a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a>). Buiten het gebied dat die database dekt (op dit moment Europa) vraagt de app de plekken op bij openbare Overpass-servers van OpenStreetMap; die ontvangen dan de coördinaten en de straal van dat gebied. Zoals bij elk internetverzoek ontvangen deze servers daarbij je IP-adres. Deze gegevens worden niet aan jou gekoppeld en niet voor andere doeleinden gebruikt door de ontwikkelaar. De Overpass-servers en de databasedienst zijn onafhankelijke partijen met eigen beleid.</p>
 
-<h2>Plaatsen zoeken</h2>
-<p>Zoek je een plaats of adres, dan worden je zoektekst en suggesties verwerkt door Apple Maps. Hiervoor geldt het <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">privacybeleid van Apple</a>.</p>
+<h2>Kaart en zoeken</h2>
+<p>De kaart zelf wordt getoond met Apple Maps, dat daarvoor kaartgegevens van Apple ophaalt voor het gebied dat je bekijkt. Zoek je een plaats of adres, dan worden je zoektekst en suggesties verwerkt door Apple Maps. Hiervoor geldt het <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">privacybeleid van Apple</a>. Wat je intypt wordt daarnaast naar de database van de app gestuurd, om passende plekken op naam of adres te vinden.</p>
 
 <h2>Routes en afstand</h2>
 <p>Bij een plek toont de app de reistijd en afstand met de auto en te voet. Die worden berekend door Apple Maps; daarvoor worden je locatie en die van de plek naar Apple gestuurd. Hiervoor geldt het <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">privacybeleid van Apple</a>. De routeknop opent de route in de navigatie-app van je toestel.</p>
@@ -64,11 +64,14 @@
 <h2>Reviews zoeken</h2>
 <p>De knop “Zoek reviews” opent Google in je browser met een zoekopdracht met de naam, plaats en land van de plek, nooit je eigen locatie. Om plaats en land te bepalen vraagt de app Apple Maps naar de locatie van de plek. De app zelf stuurt niets naar Google en leest de zoekresultaten niet terug. Zodra Google opent, geldt het <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">privacybeleid van Google</a>.</p>
 
+<h2>Links naar websites</h2>
+<p>Tik je bij een plek op de website of op de bronvermelding, dan opent die pagina in je browser: de website van de plek zelf of de pagina van de plek op OpenStreetMap. Voor die websites gelden hun eigen privacybeleid.</p>
+
 <h2>OpenStreetMap</h2>
 <p>De plekgegevens zijn afkomstig van <a href="https://www.openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a> en vallen onder de Open Database License (ODbL). OpenStreetMap-bijdragers beheren die gegevens; de ontwikkelaar van Glutenmaps garandeert niet dat ze volledig of actueel zijn. Controleer bij twijfel of een allergie altijd rechtstreeks bij de zaak.</p>
 
 <h2>Op je toestel</h2>
-<p>Bewaarde plekken, de geschiedenis van bekeken plekken en een kopie van recent opgehaalde plekken worden alleen op je toestel bewaard. Ze worden niet gesynchroniseerd en niet gedeeld. Bij het verwijderen van de app verdwijnen ze volledig.</p>
+<p>Bewaarde plekken, de geschiedenis van bekeken plekken en een kopie van recent opgehaalde plekken, met het gebied waarvoor die zijn opgehaald, worden alleen op je toestel bewaard. Ze worden niet gesynchroniseerd en niet gedeeld. Bij het verwijderen van de app verdwijnen ze volledig.</p>
 
 <h2>Kinderen</h2>
 <p>De app verzamelt geen persoonsgegevens en is daarmee ook geschikt voor gebruik door kinderen.</p>

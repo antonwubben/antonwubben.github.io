@@ -42,21 +42,21 @@
 <h2>Resumo</h2>
 <ul>
   <li>O Glutenmaps não tem conta e não recolhe dados pessoais.</li>
-  <li>A sua localização só é usada enquanto a app está aberta, para mostrar locais por perto. Não é guardada em nenhum servidor do programador.</li>
-  <li>Para obter locais, as coordenadas da área de pesquisa são enviadas para a nossa base de dados de locais e para servidores públicos do OpenStreetMap.</li>
+  <li>A sua localização só é usada enquanto a app está aberta, para mostrar locais por perto e calcular tempos de viagem. Não é guardada em nenhum servidor do programador.</li>
+  <li>Para obter locais, as coordenadas da área que está a ver e o que escreve no campo de pesquisa são enviados para a nossa base de dados de locais. Fora da área por ela coberta, apenas as coordenadas vão para servidores públicos do OpenStreetMap.</li>
   <li>Os locais guardados e o histórico ficam apenas no seu dispositivo.</li>
   <li>Não são usados serviços de análise ou rastreamento.</li>
   <li>O botão «Procurar avaliações» abre o Google no seu navegador, com o nome, a localidade e o país do local. A própria app não envia nada ao Google.</li>
 </ul>
 
 <h2>Localização</h2>
-<p>A app pede autorização para usar a sua localização, apenas enquanto está aberta. Usa-a para mostrar o mapa e os locais por perto. Também pode usar a app sem autorização: pesquise uma localidade ou morada. Pode alterar a autorização a qualquer momento nas Definições do iOS.</p>
+<p>A app pede autorização para usar a sua localização, apenas enquanto está aberta. Usa-a para mostrar o mapa, os locais por perto e o tempo de viagem até um local. Também pode usar a app sem autorização: pesquise uma localidade ou morada. Pode alterar a autorização a qualquer momento nas Definições do iOS.</p>
 
 <h2>Obter locais</h2>
-<p>Para mostrar locais, a app envia as coordenadas e o raio da área que está a ver para a base de dados da app (<a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a>) ou, fora da área por ela coberta, para servidores Overpass públicos do OpenStreetMap. Para o ficheiro de locais, a app também obtém dados de antonwubben.nl. Como em qualquer pedido de internet, estes servidores recebem o seu endereço IP. Estes dados não são associados a si e o programador não os usa para outros fins. Os servidores Overpass e o serviço de base de dados são terceiros independentes com políticas próprias.</p>
+<p>Para mostrar locais, a app envia as coordenadas da área que está a ver no mapa para a base de dados da app (<a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a>). Fora da área por ela coberta (atualmente a Europa), a app pede os locais a servidores Overpass públicos do OpenStreetMap; estes recebem as coordenadas e o raio dessa área. Como em qualquer pedido de internet, estes servidores recebem o seu endereço IP. Estes dados não são associados a si e o programador não os usa para outros fins. Os servidores Overpass e o serviço de base de dados são terceiros independentes com políticas próprias.</p>
 
-<h2>Pesquisar locais</h2>
-<p>Se pesquisar uma localidade ou morada, o texto e as sugestões são tratados pelo Mapas da Apple. Aplica-se a <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">política de privacidade da Apple</a>.</p>
+<h2>Mapa e pesquisa</h2>
+<p>O próprio mapa é mostrado com o Mapas da Apple, que obtém da Apple os dados do mapa da área que está a ver. Se pesquisar uma localidade ou morada, o texto e as sugestões são tratados pelo Mapas da Apple. Aplica-se a <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">política de privacidade da Apple</a>. O que escreve também é enviado para a base de dados da app, para encontrar locais por nome ou morada.</p>
 
 <h2>Rotas e distância</h2>
 <p>Em cada local, a app mostra o tempo e a distância de carro e a pé. São calculados pelo Mapas da Apple, pelo que a sua localização e a do local são enviadas à Apple. Aplica-se a <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">política de privacidade da Apple</a>. O botão de rota abre a rota na app de navegação do seu dispositivo.</p>
@@ -64,11 +64,14 @@
 <h2>Procurar avaliações</h2>
 <p>O botão «Procurar avaliações» abre o Google no seu navegador com uma pesquisa com o nome, a localidade e o país do local, nunca a sua própria localização. Para determinar a localidade e o país, a app pergunta ao Mapas da Apple a localização do local. A própria app não envia nada ao Google e não lê de volta os resultados da pesquisa. A partir do momento em que o Google abre, aplica-se a <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">política de privacidade do Google</a>.</p>
 
+<h2>Ligações a websites</h2>
+<p>Se tocar no website de um local ou na indicação da fonte, essa página abre no seu navegador: o website do próprio local ou a página do local no OpenStreetMap. Esses websites têm as suas próprias políticas de privacidade.</p>
+
 <h2>OpenStreetMap</h2>
 <p>Os dados dos locais vêm do <a href="https://www.openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a> e estão sob a Open Database License (ODbL). São mantidos por colaboradores do OpenStreetMap; o programador do Glutenmaps não garante que estejam completos ou atualizados. Em caso de dúvida ou alergia, confirme sempre diretamente com o estabelecimento.</p>
 
 <h2>No seu dispositivo</h2>
-<p>Os locais guardados, o histórico dos locais vistos e uma cópia dos locais obtidos recentemente ficam apenas no seu dispositivo. Não são sincronizados nem partilhados. Ao eliminar a app desaparecem por completo.</p>
+<p>Os locais guardados, o histórico dos locais vistos e uma cópia dos locais obtidos recentemente, com a área para a qual foram obtidos, ficam apenas no seu dispositivo. Não são sincronizados nem partilhados. Ao eliminar a app desaparecem por completo.</p>
 
 <h2>Crianças</h2>
 <p>A app não recolhe dados pessoais e é, por isso, também adequada para utilização por crianças.</p>

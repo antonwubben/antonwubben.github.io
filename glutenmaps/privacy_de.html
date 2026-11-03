@@ -42,21 +42,21 @@
 <h2>Zusammenfassung</h2>
 <ul>
   <li>Glutenmaps hat kein Konto und erhebt keine personenbezogenen Daten.</li>
-  <li>Dein Standort wird nur verwendet, solange die App geöffnet ist, um Orte in der Nähe zu zeigen. Er wird auf keinem Server des Entwicklers gespeichert.</li>
-  <li>Zum Abrufen von Orten werden die Koordinaten des Suchgebiets an unsere Ortsdatenbank und an öffentliche OpenStreetMap-Server gesendet.</li>
+  <li>Dein Standort wird nur verwendet, solange die App geöffnet ist, um Orte in der Nähe zu zeigen und Reisezeiten zu berechnen. Er wird auf keinem Server des Entwicklers gespeichert.</li>
+  <li>Zum Abrufen von Orten werden die Koordinaten des angezeigten Gebiets und das, was du ins Suchfeld tippst, an unsere Ortsdatenbank gesendet. Außerhalb des von ihr abgedeckten Gebiets gehen nur die Koordinaten an öffentliche OpenStreetMap-Server.</li>
   <li>Gespeicherte Orte und der Verlauf liegen nur auf deinem eigenen Gerät.</li>
   <li>Es werden keine Analyse- oder Tracking-Dienste verwendet.</li>
   <li>Die Schaltfläche „Bewertungen suchen“ öffnet Google in deinem Browser, mit Name, Ort und Land des Ortes. Die App selbst sendet nichts an Google.</li>
 </ul>
 
 <h2>Standort</h2>
-<p>Die App fragt um Erlaubnis, deinen Standort zu verwenden, ausschließlich bei geöffneter App. Damit zeigt sie die Karte und die Orte in der Nähe. Du kannst die App auch ohne Erlaubnis nutzen: Suche einfach einen Ort oder eine Adresse. Die Erlaubnis kannst du jederzeit in den iOS-Einstellungen ändern.</p>
+<p>Die App fragt um Erlaubnis, deinen Standort zu verwenden, ausschließlich bei geöffneter App. Damit zeigt sie die Karte, die Orte in der Nähe und die Reisezeit zu einem Ort. Du kannst die App auch ohne Erlaubnis nutzen: Suche einfach einen Ort oder eine Adresse. Die Erlaubnis kannst du jederzeit in den iOS-Einstellungen ändern.</p>
 
 <h2>Orte abrufen</h2>
-<p>Um Orte zu zeigen, sendet die App die Koordinaten und den Radius des angezeigten Gebiets an die Datenbank der App (<a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a>) oder, außerhalb des von ihr abgedeckten Gebiets, an öffentliche Overpass-Server von OpenStreetMap. Für die Ortsdatei ruft die App außerdem Daten von antonwubben.nl ab. Wie bei jeder Internetanfrage erhalten diese Server dabei deine IP-Adresse. Diese Daten werden nicht mit dir verknüpft und vom Entwickler nicht für andere Zwecke verwendet. Die Overpass-Server und der Datenbankdienst sind unabhängige Anbieter mit eigenen Richtlinien.</p>
+<p>Um Orte zu zeigen, sendet die App die Koordinaten des Gebiets, das du auf der Karte ansiehst, an die Datenbank der App (<a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a>). Außerhalb des von ihr abgedeckten Gebiets (derzeit Europa) fragt die App die Orte stattdessen bei öffentlichen Overpass-Servern von OpenStreetMap ab; diese erhalten die Koordinaten und den Radius des Gebiets. Wie bei jeder Internetanfrage erhalten diese Server dabei deine IP-Adresse. Diese Daten werden nicht mit dir verknüpft und vom Entwickler nicht für andere Zwecke verwendet. Die Overpass-Server und der Datenbankdienst sind unabhängige Anbieter mit eigenen Richtlinien.</p>
 
-<h2>Orte suchen</h2>
-<p>Wenn du einen Ort oder eine Adresse suchst, werden Suchtext und Vorschläge von Apple Karten verarbeitet. Es gilt die <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Datenschutzrichtlinie von Apple</a>.</p>
+<h2>Karte und Suche</h2>
+<p>Die Karte selbst wird mit Apple Karten angezeigt, das dafür Kartendaten von Apple für das angezeigte Gebiet abruft. Wenn du einen Ort oder eine Adresse suchst, werden Suchtext und Vorschläge von Apple Karten verarbeitet. Es gilt die <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Datenschutzrichtlinie von Apple</a>. Was du eintippst, wird außerdem an die Datenbank der App gesendet, um passende Orte nach Name oder Adresse zu finden.</p>
 
 <h2>Routen und Entfernung</h2>
 <p>Bei einem Ort zeigt die App Fahrzeit und Entfernung mit dem Auto und zu Fuß. Diese werden von Apple Karten berechnet; dafür werden dein Standort und der des Ortes an Apple gesendet. Es gilt die <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Datenschutzrichtlinie von Apple</a>. Die Routenschaltfläche öffnet die Route in der Navigations-App deines Geräts.</p>
@@ -64,11 +64,14 @@
 <h2>Bewertungen suchen</h2>
 <p>Die Schaltfläche „Bewertungen suchen“ öffnet Google in deinem Browser mit einer Suche nach Name, Ort und Land des Ortes, niemals nach deinem eigenen Standort. Um Ort und Land zu bestimmen, fragt die App Apple Karten nach dem Standort des Ortes. Die App selbst sendet nichts an Google und liest die Suchergebnisse nicht zurück. Ab dem Moment, in dem Google sich öffnet, gilt die <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Datenschutzrichtlinie von Google</a>.</p>
 
+<h2>Links zu Websites</h2>
+<p>Wenn du bei einem Ort auf die Website oder die Quellenangabe tippst, öffnet sich die Seite in deinem Browser: die Website des Ortes selbst oder die Seite des Ortes bei OpenStreetMap. Für diese Websites gelten ihre eigenen Datenschutzrichtlinien.</p>
+
 <h2>OpenStreetMap</h2>
 <p>Die Ortsdaten stammen von <a href="https://www.openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a> und stehen unter der Open Database License (ODbL). Die Daten werden von OpenStreetMap-Beitragenden gepflegt; der Entwickler von Glutenmaps garantiert weder Vollständigkeit noch Aktualität. Im Zweifel oder bei einer Allergie frage immer direkt beim Betrieb nach.</p>
 
 <h2>Auf deinem Gerät</h2>
-<p>Gespeicherte Orte, der Verlauf angesehener Orte und eine Kopie zuletzt abgerufener Orte werden nur auf deinem Gerät gespeichert. Sie werden weder synchronisiert noch geteilt. Beim Löschen der App verschwinden sie vollständig.</p>
+<p>Gespeicherte Orte, der Verlauf angesehener Orte und eine Kopie zuletzt abgerufener Orte samt dem Gebiet, für das sie abgerufen wurden, werden nur auf deinem Gerät gespeichert. Sie werden weder synchronisiert noch geteilt. Beim Löschen der App verschwinden sie vollständig.</p>
 
 <h2>Kinder</h2>
 <p>Die App sammelt keine personenbezogenen Daten und ist damit auch für Kinder geeignet.</p>

@@ -42,21 +42,21 @@
 <h2>En résumé</h2>
 <ul>
   <li>Glutenmaps n'a pas de compte et ne collecte aucune donnée personnelle.</li>
-  <li>Votre position n'est utilisée que lorsque l'app est ouverte, pour afficher les lieux proches. Elle n'est stockée sur aucun serveur du développeur.</li>
-  <li>Pour récupérer les lieux, les coordonnées de la zone de recherche sont envoyées à notre base de données de lieux et à des serveurs publics d'OpenStreetMap.</li>
+  <li>Votre position n'est utilisée que lorsque l'app est ouverte, pour afficher les lieux proches et calculer les temps de trajet. Elle n'est stockée sur aucun serveur du développeur.</li>
+  <li>Pour récupérer les lieux, les coordonnées de la zone consultée et ce que vous saisissez dans le champ de recherche sont envoyés à notre base de données de lieux. Hors de la zone qu'elle couvre, seules les coordonnées vont à des serveurs publics d'OpenStreetMap.</li>
   <li>Les lieux enregistrés et l'historique ne se trouvent que sur votre appareil.</li>
   <li>Aucun service d'analyse ou de suivi n'est utilisé.</li>
   <li>Le bouton « Chercher des avis » ouvre Google dans votre navigateur, avec le nom, la ville et le pays du lieu. L'app elle-même n'envoie rien à Google.</li>
 </ul>
 
 <h2>Position</h2>
-<p>L'app demande l'autorisation d'utiliser votre position, uniquement lorsqu'elle est ouverte. Elle s'en sert pour afficher la carte et les lieux proches. Vous pouvez aussi utiliser l'app sans autorisation : recherchez une ville ou une adresse. Vous pouvez modifier l'autorisation à tout moment dans les Réglages d'iOS.</p>
+<p>L'app demande l'autorisation d'utiliser votre position, uniquement lorsqu'elle est ouverte. Elle s'en sert pour afficher la carte, les lieux proches et le temps de trajet vers un lieu. Vous pouvez aussi utiliser l'app sans autorisation : recherchez une ville ou une adresse. Vous pouvez modifier l'autorisation à tout moment dans les Réglages d'iOS.</p>
 
 <h2>Récupération des lieux</h2>
-<p>Pour afficher des lieux, l'app envoie les coordonnées et le rayon de la zone consultée à la base de données de l'app (<a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a>) ou, hors de la zone qu'elle couvre, à des serveurs Overpass publics d'OpenStreetMap. Pour le fichier des lieux, l'app récupère aussi des données depuis antonwubben.nl. Comme pour toute requête internet, ces serveurs reçoivent votre adresse IP. Ces données ne sont pas liées à vous et ne sont pas utilisées par le développeur à d'autres fins. Les serveurs Overpass et le service de base de données sont des tiers indépendants avec leurs propres politiques.</p>
+<p>Pour afficher des lieux, l'app envoie les coordonnées de la zone que vous consultez sur la carte à la base de données de l'app (<a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a>). Hors de la zone qu'elle couvre (actuellement l'Europe), l'app demande les lieux à des serveurs Overpass publics d'OpenStreetMap ; ceux-ci reçoivent les coordonnées et le rayon de cette zone. Comme pour toute requête internet, ces serveurs reçoivent votre adresse IP. Ces données ne sont pas liées à vous et ne sont pas utilisées par le développeur à d'autres fins. Les serveurs Overpass et le service de base de données sont des tiers indépendants avec leurs propres politiques.</p>
 
-<h2>Recherche de lieux</h2>
-<p>Si vous recherchez une ville ou une adresse, le texte saisi et les suggestions sont traités par Plans d'Apple. La <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">politique de confidentialité d'Apple</a> s'applique.</p>
+<h2>Carte et recherche</h2>
+<p>La carte elle-même est affichée avec Plans d'Apple, qui récupère auprès d'Apple les données cartographiques de la zone consultée. Si vous recherchez une ville ou une adresse, le texte saisi et les suggestions sont traités par Plans d'Apple. La <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">politique de confidentialité d'Apple</a> s'applique. Ce que vous saisissez est aussi envoyé à la base de données de l'app, afin de trouver les lieux correspondants par nom ou adresse.</p>
 
 <h2>Itinéraires et distance</h2>
 <p>Pour un lieu, l'app affiche le temps de trajet et la distance en voiture et à pied. Ils sont calculés par Plans d'Apple : votre position et celle du lieu sont donc envoyées à Apple. La <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">politique de confidentialité d'Apple</a> s'applique. Le bouton d'itinéraire ouvre l'itinéraire dans l'app de navigation de votre appareil.</p>
@@ -64,11 +64,14 @@
 <h2>Recherche d'avis</h2>
 <p>Le bouton « Chercher des avis » ouvre Google dans votre navigateur avec une recherche contenant le nom, la ville et le pays du lieu, jamais votre propre position. Pour déterminer la ville et le pays, l'app interroge Plans d'Apple sur la position du lieu. L'app elle-même n'envoie rien à Google et ne relit pas les résultats de recherche. Dès l'ouverture de Google, la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">politique de confidentialité de Google</a> s'applique.</p>
 
+<h2>Liens vers des sites web</h2>
+<p>Si vous touchez le site web d'un lieu ou la mention de la source, cette page s'ouvre dans votre navigateur : le site web du lieu lui-même ou la page du lieu sur OpenStreetMap. Ces sites web ont leurs propres politiques de confidentialité.</p>
+
 <h2>OpenStreetMap</h2>
 <p>Les données des lieux proviennent d'<a href="https://www.openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a> et sont sous licence Open Database License (ODbL). Elles sont maintenues par les contributeurs d'OpenStreetMap ; le développeur de Glutenmaps ne garantit ni leur exhaustivité ni leur actualité. En cas de doute ou d'allergie, vérifiez toujours directement auprès de l'établissement.</p>
 
 <h2>Sur votre appareil</h2>
-<p>Les lieux enregistrés, l'historique des lieux consultés et une copie des lieux récemment récupérés ne sont stockés que sur votre appareil. Ils ne sont ni synchronisés ni partagés. Ils disparaissent complètement à la suppression de l'app.</p>
+<p>Les lieux enregistrés, l'historique des lieux consultés et une copie des lieux récemment récupérés, avec la zone pour laquelle ils ont été récupérés, ne sont stockés que sur votre appareil. Ils ne sont ni synchronisés ni partagés. Ils disparaissent complètement à la suppression de l'app.</p>
 
 <h2>Enfants</h2>
 <p>L'app ne collecte aucune donnée personnelle et convient donc aussi à une utilisation par des enfants.</p>

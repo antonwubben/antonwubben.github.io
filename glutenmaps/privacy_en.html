@@ -42,21 +42,21 @@
 <h2>Summary</h2>
 <ul>
   <li>Glutenmaps has no account and collects no personal data.</li>
-  <li>Your location is only used while the app is open, to show places nearby. It is not stored on any server of the developer.</li>
-  <li>To fetch places, the coordinates of the search area are sent to our places database and to public OpenStreetMap servers.</li>
+  <li>Your location is only used while the app is open, to show places nearby and to calculate travel times. It is not stored on any server of the developer.</li>
+  <li>To fetch places, the coordinates of the area you are viewing, and what you type in the search field, are sent to our places database. Outside the area it covers, only the coordinates go to public OpenStreetMap servers.</li>
   <li>Saved places and history are stored only on your own device.</li>
   <li>No analytics or tracking services are used.</li>
   <li>The “Search reviews” button opens Google in your browser, with the name, town and country of the place. The app itself sends nothing to Google.</li>
 </ul>
 
 <h2>Location</h2>
-<p>The app asks for permission to use your location, only while the app is open. It uses it to show the map and the places nearby. You can also use the app without permission: just search for a town or address. You can change the permission at any time in iOS Settings.</p>
+<p>The app asks for permission to use your location, only while the app is open. It uses it to show the map, the places nearby and the travel time to a place. You can also use the app without permission: just search for a town or address. You can change the permission at any time in iOS Settings.</p>
 
 <h2>Fetching places</h2>
-<p>To show places, the app sends the coordinates and radius of the area you are viewing to the app's database (<a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a>) or, outside the area that database covers, to public Overpass servers of OpenStreetMap. For the places file the app also fetches data from antonwubben.nl. As with any internet request, these servers receive your IP address. This data is not linked to you and is not used by the developer for any other purpose. The Overpass servers and the database service are independent parties with their own policies.</p>
+<p>To show places, the app sends the coordinates of the area you are viewing on the map to the app's database (<a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a>). Outside the area that database covers (currently Europe), the app asks public Overpass servers of OpenStreetMap for the places instead; they receive the coordinates and radius of that area. As with any internet request, these servers receive your IP address. This data is not linked to you and is not used by the developer for any other purpose. The Overpass servers and the database service are independent parties with their own policies.</p>
 
-<h2>Searching places</h2>
-<p>If you search for a town or address, your search text and suggestions are handled by Apple Maps. <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's privacy policy</a> applies.</p>
+<h2>Map and search</h2>
+<p>The map itself is shown with Apple Maps, which fetches map data from Apple for the area you are viewing. If you search for a town or address, your search text and suggestions are handled by Apple Maps. <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's privacy policy</a> applies. What you type is also sent to the app's database, to find matching places by name or address.</p>
 
 <h2>Routes and distance</h2>
 <p>For a place, the app shows the travel time and distance by car and on foot. These are calculated by Apple Maps, so your location and the place's location are sent to Apple. <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's privacy policy</a> applies. The route button opens the route in your device's navigation app.</p>
@@ -64,11 +64,14 @@
 <h2>Searching reviews</h2>
 <p>The “Search reviews” button opens Google in your browser with a search containing the name, town and country of the place, never your own location. To determine the town and country, the app asks Apple Maps about the location of the place. The app itself sends nothing to Google and does not read back the search results. From the moment Google opens, <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a> applies.</p>
 
+<h2>Links to websites</h2>
+<p>If you tap the website of a place or the source line, that page opens in your browser: the website of the place itself, or the page of the place on OpenStreetMap. Those websites have their own privacy policies.</p>
+
 <h2>OpenStreetMap</h2>
 <p>The place data comes from <a href="https://www.openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a> and is licensed under the Open Database License (ODbL). OpenStreetMap contributors maintain that data; the developer of Glutenmaps does not guarantee that it is complete or up to date. If in doubt, or if you have an allergy, always check directly with the venue.</p>
 
 <h2>On your device</h2>
-<p>Saved places, the history of places you viewed and a copy of recently fetched places are stored only on your device. They are not synced or shared. When you delete the app they disappear completely.</p>
+<p>Saved places, the history of places you viewed and a copy of recently fetched places, with the area they were fetched for, are stored only on your device. They are not synced or shared. When you delete the app they disappear completely.</p>
 
 <h2>Children</h2>
 <p>The app collects no personal data and is therefore also suitable for use by children.</p>
