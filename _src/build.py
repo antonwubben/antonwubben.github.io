@@ -163,6 +163,12 @@ def render(lang: str, page: str, templates: dict, strings: dict) -> str:
     s["gp_search_p"] = s["gp_search_p"].replace(
         "{apple_privacy}", ext("https://www.apple.com/legal/privacy/", s["gp_apple_privacy_text"])
     )
+    s["gp_route_p"] = s["gp_route_p"].replace(
+        "{apple_privacy}", ext("https://www.apple.com/legal/privacy/", s["gp_apple_privacy_text"])
+    )
+    s["gp_reviews_p"] = s["gp_reviews_p"].replace(
+        "{google_privacy}", ext("https://policies.google.com/privacy", s["gp_google_privacy_text"])
+    )
     s["gp_osm_p"] = s["gp_osm_p"].replace("{osm}", ext("https://www.openstreetmap.org", "OpenStreetMap"))
 
     s.update(
