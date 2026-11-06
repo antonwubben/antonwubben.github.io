@@ -28,7 +28,7 @@
   "gc_description": "Glutenscan est une app iOS qui montre en une photo si un produit contient du gluten. Sans compte.",
   "gc_icon_alt": "Icône de l'app Glutenscan",
   "gc_tagline": "Photographiez le code-barres ou la liste des ingrédients et voyez immédiatement si un produit contient du gluten.",
-  "gc_coming_soon": "Bientôt sur l'App Store",
+  "gc_download": "Télécharger sur l'App Store",
   "gc_privacy_button": "Politique de confidentialité",
   "gc_f1_h3": "Une photo suffit",
   "gc_f1_p": "Pointez l'appareil photo vers le code-barres ou la liste des ingrédients. L'app reconnaît les deux grâce au logiciel de votre iPhone et vous répond en quelques secondes.",
