@@ -192,6 +192,19 @@ main {
   margin: 0 auto;
   max-width: 34em;
 }
+.hero p.slogan {
+  color: var(--text);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+/* Kleine disclaimer onder de kenmerken op de app-pagina. */
+.disclaimer {
+  max-width: 680px;
+  margin: 40px auto 0;
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+}
 .hero .app-icon {
   width: 128px;
   height: 128px;
