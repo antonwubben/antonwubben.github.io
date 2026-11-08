@@ -154,6 +154,11 @@ def render(lang: str, page: str, templates: dict, strings: dict) -> str:
         .replace("{off}", ext("https://world.openfoodfacts.org", "Open Food Facts"))
         .replace("{off_privacy}", ext("https://world.openfoodfacts.org/privacy", s["pv_off_privacy_text"]))
     )
+    s["pv_usda_p"] = (
+        s["pv_usda_p"]
+        .replace("{usda}", ext("https://fdc.nal.usda.gov", "USDA FoodData Central"))
+        .replace("{usda_privacy}", ext("https://www.usda.gov/privacy-policy", s["pv_usda_privacy_text"]))
+    )
     s["pv_feedback_p"] = s["pv_feedback_p"].replace("{formsubmit}", ext("https://formsubmit.co", "FormSubmit"))
     s["pv_tips_p"] = s["pv_tips_p"].replace(
         "{apple_privacy}", ext("https://www.apple.com/legal/privacy/", s["pv_apple_privacy_text"])
