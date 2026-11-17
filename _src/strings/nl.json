@@ -117,9 +117,9 @@
   "gp_device_p": "Bewaarde plekken (bookmarks) en je instellingen (zoals kaarttype, startlocatie en taal) worden, als iCloud aan staat, via iCloud gesynchroniseerd tussen je eigen toestellen met dezelfde Apple-ID. Dat gaat via Apple; de ontwikkelaar ontvangt of ziet ze niet. Zet je Synchroniseren via iCloud uit in Instellingen van de app (standaard staat het aan) of iCloud voor de app uit in iOS, dan blijven ze alleen op je toestel. De geschiedenis van bekeken plekken en een kopie van recent opgehaalde plekken, met het gebied waarvoor die zijn opgehaald, worden alleen op je toestel bewaard en niet gesynchroniseerd of gedeeld. Bij het verwijderen van de app verdwijnen de gegevens op je toestel; de kopie in iCloud blijft staan en komt terug als je de app opnieuw installeert.",
   "gp_form_subject": "Glutenmaps: bericht via privacypagina",
   "nav_glutenmaps": "Glutenmaps",
-  "home_tile_gm_text": "Vind glutenvrije plekken en lees wat anderen erover zeggen.",
+  "home_tile_gm_text": "Glutenvrije plekken die andere apps missen.",
   "gm_vision_p1": "Niemand gaat ooit een complete, wereldwijde lijst van glutenvrije plekken maken. Zaken wisselen van menu, openen en sluiten, en geen enkele database houdt dat bij.",
   "gm_vision_p2": "Wat er wél altijd zal zijn, zijn mensen die hun ervaring delen: in reviews schrijven ze waar ze veilig konden eten en waar niet. Daar wil Glutenmaps naartoe: die ervaringen laten meewegen naast de gegevens uit databases, en altijd laten zien waar informatie vandaan komt.",
-  "gm_slogan": "Glutenvrij eten begint bij de reviews.",
+  "gm_slogan": "Glutenvrije plekken die andere apps missen.",
   "gc_coming_soon": "Binnenkort in de App Store"
 }

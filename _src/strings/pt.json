@@ -117,9 +117,9 @@
   "gp_device_p": "Os locais guardados (marcadores) e as suas definições (como o tipo de mapa, o local de início e o idioma) são, se o iCloud estiver ativo, sincronizados através do iCloud entre os seus próprios dispositivos com o mesmo ID Apple. Isto passa pela Apple; o programador não os recebe nem os vê. Se desativar «Sincronizar através do iCloud» nas Definições da app (vem ativo por defeito) ou o iCloud para a app no iOS, ficam apenas no seu dispositivo. O histórico dos locais vistos e uma cópia dos locais obtidos recentemente, com a área para a qual foram obtidos, ficam apenas no seu dispositivo e não são sincronizados nem partilhados. Ao eliminar a app, os dados no dispositivo desaparecem; a cópia no iCloud permanece e regressa se reinstalar a app.",
   "gp_form_subject": "Glutenmaps: mensagem através da página de privacidade",
   "nav_glutenmaps": "Glutenmaps",
-  "home_tile_gm_text": "Encontre locais sem glúten e leia o que os outros dizem sobre eles.",
+  "home_tile_gm_text": "Locais sem glúten que outras apps não mostram.",
   "gm_vision_p1": "Ninguém vai alguma vez criar uma lista completa e mundial de locais sem glúten. Os estabelecimentos mudam de ementa, abrem e fecham, e nenhuma base de dados acompanha esse ritmo.",
   "gm_vision_p2": "O que haverá sempre são pessoas a partilhar a sua experiência: nas avaliações escrevem onde puderam comer em segurança e onde não. É nessa direção que o Glutenmaps quer ir: dar peso a essas experiências a par dos dados das bases de dados e mostrar sempre de onde vem a informação.",
-  "gm_slogan": "Comer sem glúten começa pelas avaliações.",
+  "gm_slogan": "Locais sem glúten que outras apps não mostram.",
   "gc_coming_soon": "Em breve na App Store"
 }

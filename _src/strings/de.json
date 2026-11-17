@@ -117,9 +117,9 @@
   "gp_device_p": "Gespeicherte Orte (Lesezeichen) und deine Einstellungen (etwa Kartentyp, Startort und Sprache) werden, wenn iCloud aktiviert ist, über iCloud zwischen deinen eigenen Geräten mit derselben Apple-ID synchronisiert. Das läuft über Apple; der Entwickler erhält oder sieht sie nicht. Schaltest du „Über iCloud synchronisieren“ in den Einstellungen der App aus (standardmäßig ist es an) oder iCloud für die App in iOS, bleiben sie nur auf deinem Gerät. Der Verlauf angesehener Orte und eine Kopie zuletzt abgerufener Orte samt dem Gebiet, für das sie abgerufen wurden, werden nur auf deinem Gerät gespeichert und weder synchronisiert noch geteilt. Beim Löschen der App verschwinden die Daten auf deinem Gerät; die Kopie in iCloud bleibt bestehen und kehrt zurück, wenn du die App neu installierst.",
   "gp_form_subject": "Glutenmaps: Nachricht über die Datenschutzseite",
   "nav_glutenmaps": "Glutenmaps",
-  "home_tile_gm_text": "Finde glutenfreie Orte und lies, was andere darüber sagen.",
+  "home_tile_gm_text": "Glutenfreie Orte, die andere Apps übersehen.",
   "gm_vision_p1": "Niemand wird jemals eine vollständige, weltweite Liste glutenfreier Orte erstellen. Betriebe ändern ihre Speisekarte, eröffnen und schließen, und keine Datenbank kommt dabei hinterher.",
   "gm_vision_p2": "Was es dagegen immer geben wird, sind Menschen, die ihre Erfahrungen teilen: In Bewertungen schreiben sie, wo sie sicher essen konnten und wo nicht. In diese Richtung soll sich Glutenmaps entwickeln: Diese Erfahrungen neben den Datenbankangaben berücksichtigen und immer zeigen, woher Informationen stammen.",
-  "gm_slogan": "Glutenfrei essen beginnt bei den Bewertungen.",
+  "gm_slogan": "Glutenfreie Orte, die andere Apps übersehen.",
   "gc_coming_soon": "Demnächst im App Store"
 }
