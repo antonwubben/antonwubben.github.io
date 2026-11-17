@@ -80,7 +80,7 @@
   "gm_description": "Glutenmaps è un'app iOS che mostra ristoranti, caffè e negozi senza glutine vicino a te e ti fa cercare le recensioni degli altri con un tocco. Senza account.",
   "gm_icon_alt": "Icona dell'app Glutenmaps",
   "gm_tagline": "Glutenmaps combina i dati sui posti senza glutine di OpenStreetMap con altri locali dove mangiare presenti su Mappe. Così puoi scoprire anche locali che non compaiono nelle app specializzate nel senza glutine. Con un solo tocco, puoi controllare le loro recensioni su Google.",
-  "gm_subtitle": "Gratis. Senza account. Senza complicazioni.",
+  "gm_subtitle": "Posti senza glutine che altre app si perdono.",
   "gm_f1_h3": "Tutto nelle vicinanze",
   "gm_f1_p": "La mappa mostra i luoghi senza glutine intorno alla tua posizione o a qualsiasi posto cercato. Con indirizzo, distanza in auto e a piedi e sito web quando noti.",
   "gm_f2_h3": "Vedi su cosa si basa",
@@ -120,6 +120,6 @@
   "home_tile_gm_text": "Posti senza glutine che altre app si perdono.",
   "gm_vision_p1": "Nessuno creerà mai un elenco completo e mondiale dei locali senza glutine. I locali cambiano menu, aprono e chiudono, e nessun database riesce a starci dietro.",
   "gm_vision_p2": "Ciò che ci sarà sempre sono persone che condividono la propria esperienza: nelle recensioni scrivono dove hanno potuto mangiare in sicurezza e dove no. È la direzione in cui vuole andare Glutenmaps: dare peso a queste esperienze accanto ai dati dei database e mostrare sempre da dove provengono le informazioni.",
-  "gm_slogan": "Posti senza glutine che altre app si perdono.",
+  "gm_slogan": "Mangiare senza glutine comincia dalle recensioni.",
   "gc_coming_soon": "Presto su App Store"
 }
