@@ -188,6 +188,7 @@ main {
 }
 .hero p {
   font-size: clamp(19px, 2.6vw, 24px);
+  line-height: 1.4;
   color: var(--muted);
   margin: 0 auto;
   max-width: 34em;
@@ -284,7 +285,7 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
-  margin-top: 56px;
+  margin-top: 48px;
 }
 .feature {
   background: var(--surface);
@@ -306,7 +307,7 @@ main {
 }
 .feature .symbol svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .feature h3 { font-size: 20px; font-weight: 600; margin: 0 0 6px; letter-spacing: -0.01em; }
-.feature p { margin: 0; color: var(--muted); }
+.feature p { margin: 0; color: var(--muted); line-height: 1.5; }
 
 /* Visie onder de kenmerken op de Glutenmaps-pagina: korte, gecentreerde tekst. */
 .vision {
@@ -436,8 +437,15 @@ footer ul { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
 .home .tile h2 { margin-bottom: 8px; }
 footer.minimal { border-top: 0; justify-content: center; }
 
-/* Op smalle telefoons staan de twee homepage-tegels onder elkaar en blijven ze binnen de viewport. */
+/* Op smalle telefoons staan de app-pagina’s compacter en de twee homepage-tegels onder elkaar. */
 @media (max-width: 600px) {
+  .hero { padding: 48px 0 28px; }
+  .hero .app-icon { width: 112px; height: 112px; border-radius: 25px; margin-bottom: 20px; }
+  .actions { margin-top: 24px; }
+  .features { margin-top: 32px; }
+  .feature { padding: 26px 22px; }
+  .vision { margin-top: 52px; }
+
   .home main {
     width: 100%;
     min-width: 0;
